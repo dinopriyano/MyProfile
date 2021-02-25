@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MyProfile</string>
+    <string name="splashText">Hii...</string>
+    <string name="name">Dino Priyano</string>
+    <string name="email">dinopriyano@gmail.com</string>
+    <string name="desc">Android and Desktop Developer</string>
+    <string name="close">Close Apps</string>
+    <string name="phone">(+62) 896 6101 1050</string>
+    <string name="address">Centex Street, Ciracas, East Jakarta</string>
+    <string name="dob">03-03-2003</string>
+    <string name="keterangan1">Making multi window design and data passing between activities</string>
+    <string name="keterangan2">Designing and encoding program flow in a mobile application</string>
+    <string name="keterangan3">Making an application by applying user input processing techniques</string>
+    <string name="keterangan4">Making mobile applications with advanced application design techniques</string>
+    <string name="keterangan5">Making a mobile application by implementing the SQLite database</string>
+    <string name="pelajaran">Project Target for \nThis Semester</string>
+    <string name="see_portfolio">My Portfolio</string>
+    <string name="detail_profile">Profile Detail</string>
+</resources>
