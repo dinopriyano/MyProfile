@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DetailPortfolio extends AppCompatActivity {
+public class DetailPortfolioActivity extends AppCompatActivity {
 
     RecyclerView recyclerSS;
     RecyclerView.Adapter adapter;

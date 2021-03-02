@@ -18,7 +18,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Calculator extends AppCompatActivity implements View.OnClickListener {
+public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener {
 
     private CardView btnBagi,btnKali,btnDelete,btnAc,btnSatu,btnDua,btnTiga,btnEmpat,btnLima,btnEnam,btnTujuh,btnDelapan,btnSembilan,btnNol,btnTambah,btnKurang,btnTitik,btnSamadengan;
     private EditText etSatu,etDua;

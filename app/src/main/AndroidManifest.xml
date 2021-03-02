@@ -9,24 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Calculator"
-            android:theme="@style/AllWhite"></activity>
         <activity
-            android:name=".DetailPortfolio"
-            android:parentActivityName=".Splash"
-            android:theme="@style/NavWhite" />
+            android:name=".DisplayContactActivity"
+            android:theme="@style/AllWhite"
+            android:parentActivityName=".SplashActivity"/>
         <activity
-            android:name=".Portfolio"
-            android:parentActivityName=".Splash"
+            android:name=".ContactActivity"
+            android:theme="@style/AllWhite"
+            android:parentActivityName=".SplashActivity"/>
+        <activity
+            android:name=".CalculatorActivity"
+            android:theme="@style/AllWhite" />
+        <activity
+            android:name=".DetailPortfolioActivity"
+            android:parentActivityName=".SplashActivity"
+            android:theme="@style/AllWhite" />
+        <activity
+            android:name=".PortfolioActivity"
+            android:parentActivityName=".SplashActivity"
             android:theme="@style/NavWhite" />
-        <activity android:name=".Splash">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home" />
+        <activity android:name=".HomeActivity" />
     </application>
 
 </manifest>

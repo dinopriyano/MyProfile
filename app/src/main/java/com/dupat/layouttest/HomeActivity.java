@@ -25,9 +25,9 @@ import com.mancj.slideup.SlideUpBuilder;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Home extends AppCompatActivity implements View.OnClickListener {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private CardView btnShowPortfolio,btnCalculator;
+    private CardView btnShowPortfolio,btnCalculator,btnContact;
     private ImageView pictProfile;
     private FrameLayout frameProfile;
     private SlideUp slideUpProfile;
@@ -45,6 +45,8 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
 
         btnCalculator = findViewById(R.id.btnCalculator);
         btnCalculator.setOnClickListener(this);
+        btnContact = findViewById(R.id.btnContact);
+        btnContact.setOnClickListener(this);
         slideView = findViewById(R.id.slideView);
         dim = findViewById(R.id.dim);
         frameProfile = findViewById(R.id.frameProfile);
@@ -140,7 +142,14 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.btnCalculator:
             {
-                startActivity(new Intent(this,Calculator.class));
+                startActivity(new Intent(this, CalculatorActivity.class));
+                break;
+            }
+
+            case R.id.btnContact:
+            {
+                startActivity(new Intent(this, ContactActivity.class));
+                break;
             }
         }
     }

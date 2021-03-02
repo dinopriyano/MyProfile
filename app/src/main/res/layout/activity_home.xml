@@ -8,7 +8,7 @@
     android:id="@+id/containerHome"
     android:fitsSystemWindows="true"
     android:background="#FFFFFF"
-    tools:context=".Home">
+    tools:context=".HomeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -210,6 +210,7 @@
                                     android:layout_height="wrap_content">
 
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/btnContact"
                                         android:foreground="?android:attr/selectableItemBackground"
                                         android:layout_width="75dp"
                                         app:cardCornerRadius="12dp"

@@ -13,7 +13,7 @@ import com.dupat.layouttest.model.ModelPortfolio;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Portfolio extends AppCompatActivity {
+public class PortfolioActivity extends AppCompatActivity {
 
     RecyclerView recyclerPortfolio;
     RecyclerView.Adapter adapter;
