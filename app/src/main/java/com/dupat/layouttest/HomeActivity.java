@@ -27,7 +27,7 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private CardView btnShowPortfolio,btnCalculator,btnContact;
+    private CardView btnShowPortfolio,btnCalculator,btnContact,btnFriends,btnfaceRecognition;
     private ImageView pictProfile;
     private FrameLayout frameProfile;
     private SlideUp slideUpProfile;
@@ -47,6 +47,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         btnCalculator.setOnClickListener(this);
         btnContact = findViewById(R.id.btnContact);
         btnContact.setOnClickListener(this);
+        btnFriends = findViewById(R.id.btnFriends);
+        btnFriends.setOnClickListener(this);
+        btnfaceRecognition = findViewById(R.id.btnFaceRecognition);
+        btnfaceRecognition.setOnClickListener(this);
         slideView = findViewById(R.id.slideView);
         dim = findViewById(R.id.dim);
         frameProfile = findViewById(R.id.frameProfile);
@@ -149,6 +153,18 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnContact:
             {
                 startActivity(new Intent(this, ContactActivity.class));
+                break;
+            }
+
+            case R.id.btnFriends:
+            {
+                startActivity(new Intent(this, FriendsActivity.class));
+                break;
+            }
+
+            case R.id.btnFaceRecognition:
+            {
+                startActivity(new Intent(this, FaceRecognitionActivity.class));
                 break;
             }
         }

@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#FFFFFF</item>
-        <item name="colorPrimaryDark">#FFFFFF</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/orange</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
@@ -17,6 +17,11 @@
         <item name="android:statusBarColor" tools:ignore="NewApi">#FFFFFF</item>
         <item name="android:navigationBarColor" tools:ignore="NewApi">#FFFFFF</item>
         <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="colorControlNormal">#FFFFFF</item>
     </style>
 
 </resources>

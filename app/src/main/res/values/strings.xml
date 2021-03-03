@@ -31,4 +31,13 @@
     <string name="deleteContact">Are you sure, you want to delete it.</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="tfe_od_app_name" translation_description="Object Detection demo app [CHAR_LIMIT=40]">Face Recognition</string>
+    <string name="tfe_od_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
+
+    <array name="comments">
+        <item>Teman</item>
+        <item>Biasa saja</item>
+        <item>Bagaimana ya?</item>
+        <item>No comment</item>
+    </array>
 </resources>

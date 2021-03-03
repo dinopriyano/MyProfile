@@ -99,7 +99,7 @@ public class DBHelper extends SQLiteOpenHelper {
         res.moveToFirst();
 
         while(res.isAfterLast() == false){
-            ContactModel model = new ContactModel(res.getString(res.getColumnIndex(CONTACTS_COLUMN_NAME)),res.getInt(res.getColumnIndex(CONTACTS_COLUMN_ID)));
+            ContactModel model = new ContactModel(res.getString(res.getColumnIndex(CONTACTS_COLUMN_NAME)),res.getInt(res.getColumnIndex(CONTACTS_COLUMN_ID)),res.getBlob(res.getColumnIndex(CONTACTS_COLUMN_PHOTO)));
             array_list.add(model);
             res.moveToNext();
         }

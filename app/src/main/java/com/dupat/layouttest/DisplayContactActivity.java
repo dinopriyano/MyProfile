@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.dupat.layouttest.helper.DBHelper;
 import com.dupat.layouttest.utils.Utils;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -37,11 +38,11 @@ public class DisplayContactActivity extends AppCompatActivity implements View.On
 
     boolean isPhotoChange = false;
     int CODE_IMG_GALLERY = 3;
-    TextView name ;
-    TextView phone;
-    TextView email;
-    TextView street;
-    TextView place;
+    TextInputEditText name ;
+    TextInputEditText phone;
+    TextInputEditText email;
+    TextInputEditText street;
+    TextInputEditText place;
     ImageView ivContact;
     CardView btnChangePhoto;
     Toolbar toolbar;
@@ -56,11 +57,11 @@ public class DisplayContactActivity extends AppCompatActivity implements View.On
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("");
-        name = (TextView) findViewById(R.id.editTextName);
-        phone = (TextView) findViewById(R.id.editTextPhone);
-        email = (TextView) findViewById(R.id.editTextStreet);
-        street = (TextView) findViewById(R.id.editTextEmail);
-        place = (TextView) findViewById(R.id.editTextCity);
+        name = findViewById(R.id.editTextName);
+        phone = findViewById(R.id.editTextPhone);
+        email = findViewById(R.id.editTextStreet);
+        street = findViewById(R.id.editTextEmail);
+        place = findViewById(R.id.editTextCity);
         ivContact = findViewById(R.id.ivContact);
         btnChangePhoto = findViewById(R.id.btnChangePhoto);
         btnChangePhoto.setOnClickListener(this);
@@ -204,6 +205,7 @@ public class DisplayContactActivity extends AppCompatActivity implements View.On
                                 Toast.makeText(getApplicationContext(), "Deleted Successfully",
                                         Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(),ContactActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
                             }
                         })
@@ -216,6 +218,8 @@ public class DisplayContactActivity extends AppCompatActivity implements View.On
                 AlertDialog d = builder.create();
                 d.setTitle("Are you sure");
                 d.show();
+                d.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.bit_black));
+                d.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.orange));
 
                 return true;
             default:
@@ -236,8 +240,8 @@ public class DisplayContactActivity extends AppCompatActivity implements View.On
                     if(mydb.updateContact(id_To_Update,name.getText().toString(), phone.getText().toString(), email.getText().toString(), street.getText().toString(), place.getText().toString(),isPhotoChange? getBitmapAsByteArray(new Utils().resizedBitmap(getBitmapFromUri(Uri.parse(ivContact.getTag().toString())),200)):null)){
                         Toast.makeText(getApplicationContext(), "Contact Updated", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(),ContactActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
-                        finish();
                     } else{
                         Toast.makeText(getApplicationContext(), "Something Wrong!", Toast.LENGTH_SHORT).show();
                     }
@@ -248,8 +252,8 @@ public class DisplayContactActivity extends AppCompatActivity implements View.On
                     {
                         Toast.makeText(getApplicationContext(), "Contact Inserted!", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(),ContactActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
-                        finish();
                     }
                     else
                     {

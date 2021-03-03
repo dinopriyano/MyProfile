@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dupat.layouttest.DisplayContactActivity;
@@ -52,7 +53,27 @@ public class ContactAdapter extends BaseAdapter {
         }
 
         TextView txtName = view.findViewById(R.id.txtName);
+        TextView txtSort = view.findViewById(R.id.txtSort);
+        ImageView ivContact = view.findViewById(R.id.ivContact);
+        View divider = view.findViewById(R.id.divider);
+
+        String alphabet = String.valueOf(model.getName().trim().toCharArray()[0]).toUpperCase();
         txtName.setText(model.getName());
+        txtSort.setText(alphabet);
+        if(model.getImage() != null){
+            ivContact.setImageBitmap(new DisplayContactActivity().getImage(model.getImage()));
+        }
+
+        if(i>0 && alphabet.equals(String.valueOf(list.get(i-1).getName().trim().toCharArray()[0]).toUpperCase())){
+            divider.setVisibility(View.VISIBLE);
+            txtSort.setVisibility(View.GONE);
+        }
+
+        if(i != list.size()-1 && alphabet.equals(String.valueOf(list.get(i+1).getName().trim().toCharArray()[0]).toUpperCase())){
+            divider.setVisibility(View.GONE);
+            txtSort.setVisibility(View.VISIBLE);
+        }
+
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

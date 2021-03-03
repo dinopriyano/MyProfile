@@ -252,6 +252,7 @@
                                     android:layout_height="wrap_content">
 
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/btnFriends"
                                         android:foreground="?android:attr/selectableItemBackground"
                                         android:layout_width="75dp"
                                         app:cardCornerRadius="12dp"
@@ -266,9 +267,10 @@
                                             android:layout_height="match_parent">
 
                                             <ImageView
-                                                android:layout_width="35dp"
-                                                android:src="@drawable/ic_widget"
-                                                android:layout_height="35dp" />
+                                                android:layout_width="wrap_content"
+                                                android:src="@drawable/ic_friend"
+                                                android:adjustViewBounds="true"
+                                                android:layout_height="45dp" />
 
                                         </LinearLayout>
 
@@ -276,7 +278,7 @@
 
                                     <TextView
                                         android:layout_width="wrap_content"
-                                        android:text="Upcoming"
+                                        android:text="Friends"
                                         android:layout_marginTop="5dp"
                                         android:textColor="#444444"
                                         android:textSize="12sp"
@@ -301,6 +303,7 @@
                                     android:layout_height="wrap_content">
 
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/btnFaceRecognition"
                                         android:foreground="?android:attr/selectableItemBackground"
                                         android:layout_width="75dp"
                                         app:cardCornerRadius="12dp"
@@ -316,7 +319,7 @@
 
                                             <ImageView
                                                 android:layout_width="35dp"
-                                                android:src="@drawable/ic_widget"
+                                                android:src="@drawable/ic_face_recognition"
                                                 android:layout_height="35dp" />
 
                                         </LinearLayout>
@@ -325,7 +328,8 @@
 
                                     <TextView
                                         android:layout_width="wrap_content"
-                                        android:text="Upcoming"
+                                        android:text="Face Verification"
+                                        android:gravity="center_horizontal"
                                         android:layout_marginTop="5dp"
                                         android:textColor="#444444"
                                         android:textSize="12sp"
@@ -339,7 +343,7 @@
                                     android:gravity="center"
                                     android:layout_width="wrap_content"
                                     android:orientation="vertical"
-                                    android:layout_height="wrap_content">
+                                    android:layout_height="match_parent">
 
                                     <androidx.cardview.widget.CardView
                                         android:foreground="?android:attr/selectableItemBackground"
@@ -380,7 +384,7 @@
                                     android:gravity="center"
                                     android:layout_width="wrap_content"
                                     android:orientation="vertical"
-                                    android:layout_height="wrap_content">
+                                    android:layout_height="match_parent">
 
                                     <androidx.cardview.widget.CardView
                                         android:foreground="?android:attr/selectableItemBackground"
